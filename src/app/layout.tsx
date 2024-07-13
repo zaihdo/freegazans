@@ -31,7 +31,7 @@ export default function RootLayout({
 		<html
 			style={{ height: '100%', background: 'var(--page-background)' }}
 			data-border="playful"
-			data-theme="dark"
+			data-theme="light"
 			data-neutral="gray"
 			data-brand="cyan"
 			data-accent="violet"
