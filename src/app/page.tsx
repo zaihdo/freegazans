@@ -39,27 +39,28 @@ export default function Home() {
 					justifyContent='center'
 					>
 					<Heading
-						variant="display-strong-s"
+						variant="display-strong-l"
 						onBackground="neutral-strong">
-						What is FreeGazans?
+						Free Gazans
 					</Heading>
 				</Flex>
 				<Flex
 					style={{zIndex: '1', width: '95%'}}
 					position="relative"
-					background="accent-medium"
+					background="surface"
 					border="neutral-medium"
 					borderStyle="solid-1"
-					radius="l"
+					radius="xl-8"
 					paddingX="24"
 					paddingY="16"
 					marginBottom="xs">
 					<Text
-						onBackground="neutral-medium">
+						onSolid='accent-weak'
+						>
 						As the bombs rain down, Gazans are desperately trying to evacuate through the only escape route i.e. the Rafah border crossing. Although
 						it is now closed, once open again, the Egyptians are charging our brothers and sisters $5000 per person just to cross through. FreeGazans was created
 						to have a centralised place to find the gofundme or other donation links of vetted individuals and families in Gaza. Links have been sourced directly 
-						from the individuals who can be contacted via LinkedIn.
+						from the individuals.
 					</Text>
 				</Flex>
 				<Flex
@@ -102,13 +103,13 @@ export default function Home() {
 							<Heading
 								variant="display-strong-s"
 								onBackground="neutral-strong"
-								style={{color: 'red'}}>
-								Read their stories.<br/> Donate to their cause.<br/> Share Share Share.
+								>
+								<Text style={{color: '#01b760'}}>Read their stories.</Text><br/><Text style={{color: '#d83838'}}>Donate to their cause.</Text><br/><Text color="#fff">Share Share Share.</Text>
 							</Heading>
 							<Button
 								style={{ marginBottom: 'var(--static-space-20)' }}
 								suffixIcon="chevronRight"
-								variant="secondary">
+								variant="tertiary">
 								<Link
 									href="https://techforpalestine.org/projects/">
 										View more projects here
@@ -123,7 +124,7 @@ export default function Home() {
 						fillWidth
 						>
 							<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
+							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://www.gofundme.com/f/help-the-ahmed-family-to-leave-gaza-for-egypt">
 							<Flex
 								fillWidth
@@ -151,7 +152,7 @@ export default function Home() {
 							</Flex>
 						</Link>
 							<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
+							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://gofund.me/ea678d4c">
 							<Flex
 								fillWidth
@@ -179,7 +180,7 @@ export default function Home() {
 							</Flex>
 						</Link>
 						<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
+							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://www.gofundme.com/f/eid-aladha-donations-for-the-alkabariti-family-of-gaza">
 							<Flex
 								fillWidth
@@ -207,7 +208,7 @@ export default function Home() {
 							</Flex>
 						</Link>
 						<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
+							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://gofund.me/e1e1b340">
 							<Flex
 								fillWidth
@@ -234,7 +235,7 @@ export default function Home() {
 								</Text>
 							</Flex>
 						</Link><Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
+							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://gofund.me/2b217b63">
 							<Flex
 								fillWidth
@@ -261,7 +262,7 @@ export default function Home() {
 								</Text>
 							</Flex>
 						</Link><Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
+							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://gofund.me/59eef690">
 							<Flex
 								fillWidth
@@ -288,8 +289,8 @@ export default function Home() {
 								</Text>
 							</Flex>
 						</Link><Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://www.gofundme.com/f/help-abdarhman-family-survive-the-genocide">
+							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
+							href="https://www.gofundme.com/f/Reunitedmyfamily?attribution_id=sl:2696f2cb-b9e4-48ab-b393-438cb72f7f3d&lang=en_GB&utm_campaign=fp_sharesheet&utm_medium=customer&utm_source=copy_link">
 							<Flex
 								fillWidth
 								direction="column"
@@ -327,23 +328,16 @@ export default function Home() {
 				paddingY="m">
 				<Text
 					onBackground="neutral-weak">
-					© 2024 Once UI, MIT License
+					Built with love for the people of Gaza with <Link href="https://www.once-ui.com/">OnceUI</Link>
 				</Text>
 				<Flex
 					gap="12">
 					<Button
-						href="https://github.com/once-ui-system/nextjs-starter"
+						href="https://www.linkedin.com/in/zaidhimran/"
 						prefixIcon="linkedin"
 						size="s"
 						variant="tertiary">
-						linkedIn
-					</Button>
-					<Button
-						href="https://discord.com/invite/5EyAQ4eNdS"
-						prefixIcon="discord"
-						size="s"
-						variant="tertiary">
-						Discord
+						LinkedIn
 					</Button>
 				</Flex>
 			</Flex>

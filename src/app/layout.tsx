@@ -30,11 +30,16 @@ export default function RootLayout({
 	return (
 		<html
 			style={{ height: '100%', background: 'var(--page-background)' }}
-			data-border="playful"
-			data-theme="light"
+			// data-border="playful"
+			// data-theme="light"
+			// data-neutral="gray"
+			// data-brand="cyan"
+			// data-accent="violet"
+			data-theme="dark"
+			data-brand="moss"
+			data-accent="moss"
 			data-neutral="gray"
-			data-brand="cyan"
-			data-accent="violet"
+			data-border="playful"
 			lang="en"
 			className={`${inter.variable}`}>
 			<body
