@@ -20,6 +20,7 @@ import {
 import {
 	FaDiscord,
 	FaGithub,
+	FaLinkedinIn
 } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
@@ -38,5 +39,6 @@ export const iconLibrary: Record<string, IconType> = {
 	openLink: HiOutlineLink,
 	arrowUpRight: HiArrowUpRight,
 	discord: FaDiscord,
-	github: FaGithub
+	github: FaGithub,
+	linkedin: FaLinkedinIn
 };

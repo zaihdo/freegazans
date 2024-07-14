@@ -122,6 +122,62 @@ export default function Home() {
 						mobileColumns="1col"
 						fillWidth
 						>
+							<Link
+							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
+							href="https://www.gofundme.com/f/help-the-ahmed-family-to-leave-gaza-for-egypt">
+							<Flex
+								fillWidth
+								direction="column"
+								paddingY="8"
+								gap="8">
+								<Flex
+									fillWidth
+									alignItems="center"
+									gap="12">
+									<Text
+										onBackground="neutral-strong"
+										variant="body-strong-m">
+										Sally Ahmed
+									</Text>
+									<Icon
+										size="s"
+										name="arrowUpRight"/>
+								</Flex>
+								<Text
+									onBackground="neutral-weak"
+									variant="body-default-s">
+									👉 After years of hard work and saving to get a home in the blockaded Gaza, Sally and her husband had to leave it all when the bombs started dropping. A month later they found out about the destruction of their apartment complex. 
+								</Text>
+							</Flex>
+						</Link>
+							<Link
+							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
+							href="https://gofund.me/ea678d4c">
+							<Flex
+								fillWidth
+								direction="column"
+								paddingY="8"
+								gap="8">
+								<Flex
+									fillWidth
+									alignItems="center"
+									gap="12">
+									<Text
+										onBackground="neutral-strong"
+										variant="body-strong-m">
+										Suhaib Abid
+									</Text>
+									<Icon
+										size="s"
+										name="arrowUpRight"/>
+								</Flex>
+								<Text
+									onBackground="neutral-weak"
+									variant="body-default-s">
+									👉 Suhaib and his family, including his elderly parents have been, after 171 days of chaos and despair under the rain of missiles, are seeking our help to find an escape.
+								</Text>
+							</Flex>
+						</Link>
 						<Link
 							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 25, padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://www.gofundme.com/f/eid-aladha-donations-for-the-alkabariti-family-of-gaza">
@@ -228,7 +284,7 @@ export default function Home() {
 								<Text
 									onBackground="neutral-weak"
 									variant="body-default-s">
-									👉 Abdarhman's family. Since the beginning of the conflict this family have already been displaced 7 (seven!!!!) times. Her sister needs immediate medical attention and his brother wants to rebuild the family bakery destroyed by the IOF. Please, read about their campaign here.
+									👉 Abdarhman&lsquo;s family. Since the beginning of the conflict this family have already been displaced 7 (seven!!!!) times. Her sister needs immediate medical attention and his brother wants to rebuild the family bakery destroyed by the IOF. Please, read about their campaign here.
 								</Text>
 							</Flex>
 						</Link><Link
@@ -277,10 +333,10 @@ export default function Home() {
 					gap="12">
 					<Button
 						href="https://github.com/once-ui-system/nextjs-starter"
-						prefixIcon="github"
+						prefixIcon="linkedin"
 						size="s"
 						variant="tertiary">
-						GitHub
+						linkedIn
 					</Button>
 					<Button
 						href="https://discord.com/invite/5EyAQ4eNdS"
