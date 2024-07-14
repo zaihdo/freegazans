@@ -101,10 +101,10 @@ export default function Home() {
 							gap="24"
 							>
 							<Heading
-								variant="display-strong-s"
+								variant="display-default-xs"
 								onBackground="neutral-strong"
 								>
-								<Text style={{color: '#01b760'}}>Read their stories.</Text><br/><Text style={{color: '#d83838'}}>Donate to their cause.</Text><br/><Text color="#fff">Share Share Share.</Text>
+								<Text style={{color: '#01b760'}}>Read their stories.</Text><br/><Text style={{color: '#d83838'}}>Donate to the cause.</Text><br/><Text color="#fff">Share Share Share.</Text>
 							</Heading>
 							<Button
 								style={{ marginBottom: 'var(--static-space-20)' }}
@@ -263,7 +263,8 @@ export default function Home() {
 							</Flex>
 						</Link><Link
 							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://gofund.me/59eef690">
+							href="https://gofund.me/59eef690"
+							>
 							<Flex
 								fillWidth
 								direction="column"
