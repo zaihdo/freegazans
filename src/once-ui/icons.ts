@@ -15,6 +15,8 @@ import {
 	HiExclamationCircle,
 	HiCheckCircle,
 	HiArrowUpRight,
+	HiMoon,
+	HiSun,
 } from "react-icons/hi2";
 
 import {
@@ -38,6 +40,8 @@ export const iconLibrary: Record<string, IconType> = {
 	close: HiMiniXMark,
 	openLink: HiOutlineLink,
 	arrowUpRight: HiArrowUpRight,
+	moon: HiMoon,
+	sun: HiSun,
 	discord: FaDiscord,
 	github: FaGithub,
 	linkedin: FaLinkedinIn
