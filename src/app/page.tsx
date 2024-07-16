@@ -6,6 +6,8 @@ import React from 'react';
 import { Heading, Text, Flex, Button, Grid, Icon } from '@/once-ui/components';
 import Link from 'next/link';
 import { useTheme } from './ThemeContext';
+import peopleData from './peopleData';
+import LinkCard from './LinkCard';
 
 export default function Home() {
 	const { theme, toggleTheme } = useTheme();
@@ -105,207 +107,19 @@ export default function Home() {
 						</Flex>
 					</Flex>
 					<Grid
-						columns="repeat(1, 1fr)"
-						tabletColumns="1col"
-						mobileColumns="1col"
-						fillWidth>
-						<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://www.gofundme.com/f/help-the-ahmed-family-to-leave-gaza-for-egypt">
-							<Flex
-								fillWidth
-								direction="column"
-								paddingY="8"
-								gap="8">
-								<Flex
-									fillWidth
-									alignItems="center"
-									gap="12">
-									<Text
-										onBackground="neutral-strong"
-										variant="body-strong-m">
-										Sally Ahmed
-									</Text>
-									<Icon
-										size="s"
-										name="arrowUpRight"/>
-								</Flex>
-								<Text
-									onBackground="neutral-weak"
-									variant="body-default-s">
-									👉 After years of hard work and saving to get a home in the blockaded Gaza, Sally and her husband had to leave it all when the bombs started dropping. A month later they found out about the destruction of their apartment complex. 
-								</Text>
-							</Flex>
-						</Link>
-						<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://gofund.me/ea678d4c">
-							<Flex
-								fillWidth
-								direction="column"
-								paddingY="8"
-								gap="8">
-								<Flex
-									fillWidth
-									alignItems="center"
-									gap="12">
-									<Text
-										onBackground="neutral-strong"
-										variant="body-strong-m">
-										Suhaib Abid
-									</Text>
-									<Icon
-										size="s"
-										name="arrowUpRight"/>
-								</Flex>
-								<Text
-									onBackground="neutral-weak"
-									variant="body-default-s">
-									👉 Suhaib and his family, including his elderly parents have been, after 171 days of chaos and despair under the rain of missiles, are seeking our help to find an escape.
-								</Text>
-							</Flex>
-						</Link>
-						<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://www.gofundme.com/f/eid-aladha-donations-for-the-alkabariti-family-of-gaza">
-							<Flex
-								fillWidth
-								direction="column"
-								paddingY="8"
-								gap="8">
-								<Flex
-									fillWidth
-									alignItems="center"
-									gap="12">
-									<Text
-										onBackground="neutral-strong"
-										variant="body-strong-m">
-										Sabrin Alkabariti
-									</Text>
-									<Icon
-										size="s"
-										name="arrowUpRight"/>
-								</Flex>
-								<Text
-									onBackground="neutral-weak"
-									variant="body-default-s">
-									👉 Sabrin lives in Gaza with her parents and four siblings - Ahmed, Mahmoud, Mohamed and Hanin. Since the start of the genocide and the destruction of their home, they have had to move seven times. After seeking refuge in Rafah, they had to flee the Israeli assault and are all now living in a single tent in Khan Younis.
-								</Text>
-							</Flex>
-						</Link>
-						<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://gofund.me/e1e1b340">
-							<Flex
-								fillWidth
-								direction="column"
-								paddingY="8"
-								gap="8">
-								<Flex
-									fillWidth
-									alignItems="center"
-									gap="12">
-									<Text
-										onBackground="neutral-strong"
-										variant="body-strong-m">
-										Iyad R. Manaa
-									</Text>
-									<Icon
-										size="s"
-										name="arrowUpRight"/>
-								</Flex>
-								<Text
-									onBackground="neutral-weak"
-									variant="body-default-s">
-									👉 Iyad his family have lost their apartment and all their personal belongings when the building where they lived for 10 years was destroyed by the IOF. They moved first to Rafah and then to Deir Al-Balah, still displaced and homeless without access to water and food. Click to read their story.
-								</Text>
-							</Flex>
-						</Link>
-						<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://gofund.me/2b217b63">
-							<Flex
-								fillWidth
-								direction="column"
-								paddingY="8"
-								gap="8">
-								<Flex
-									fillWidth
-									alignItems="center"
-									gap="12">
-									<Text
-										onBackground="neutral-strong"
-										variant="body-strong-m">
-										Ibrahim Ahmad
-									</Text>
-									<Icon
-										size="s"
-										name="arrowUpRight"/>
-								</Flex>
-								<Text
-									onBackground="neutral-weak"
-									variant="body-default-s">
-									👉 Ibrahim, his wife, and mom are facing starvation and lack of water in central Gaza. Their only hope is to flee Gaza when Rafah Crossing reopens. The bribe to cross to the border is 5000£ and they can only count on us to pay that shameful amount. 
-								</Text>
-							</Flex>
-						</Link>
-						<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://gofund.me/59eef690">
-							<Flex
-								fillWidth
-								direction="column"
-								paddingY="8"
-								gap="8">
-								<Flex
-									fillWidth
-									alignItems="center"
-									gap="12">
-									<Text
-										onBackground="neutral-strong"
-										variant="body-strong-m">
-										Abdul Rahman Alsalibi
-									</Text>
-									<Icon
-										size="s"
-										name="arrowUpRight"/>
-								</Flex>
-								<Text
-									onBackground="neutral-weak"
-									variant="body-default-s">
-									👉 Abdarhman&lsquo;s family. Since the beginning of the conflict this family have already been displaced 7 (seven!!!!) times. Her sister needs immediate medical attention and his brother wants to rebuild the family bakery destroyed by the IOF. Please, read about their campaign here.
-								</Text>
-							</Flex>
-						</Link>
-						<Link
-							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://www.gofundme.com/f/Reunitedmyfamily?attribution_id=sl:2696f2cb-b9e4-48ab-b393-438cb72f7f3d&lang=en_GB&utm_campaign=fp_sharesheet&utm_medium=customer&utm_source=copy_link">
-							<Flex
-								fillWidth
-								direction="column"
-								paddingY="8"
-								gap="8">
-								<Flex
-									fillWidth
-									alignItems="center"
-									gap="12">
-									<Text
-										onBackground="neutral-strong"
-										variant="body-strong-m">
-										Yasmin Riyad
-									</Text>
-									<Icon
-										size="s"
-										name="arrowUpRight"/>
-								</Flex>
-								<Text
-									onBackground="neutral-weak"
-									variant="body-default-s">
-									👉 Please support Yasmin and Islam and as many Palestinians you can by donating or sharing their gofundme. These are the people you see being killed and wounded by the US and “Israel” on your screens. Support them please.
-								</Text>
-							</Flex>
-						</Link>
-					</Grid>
+            columns="repeat(1, 1fr)"
+            tabletColumns="1col"
+            mobileColumns="1col"
+            fillWidth>
+            {peopleData.map((person, index) => (
+              <LinkCard
+                key={index}
+                name={person.name}
+                description={person.description}
+                link={person.link}
+              />
+            ))}
+          </Grid>
 				</Flex>
 			</Flex>
 			<Flex
