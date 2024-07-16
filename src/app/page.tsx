@@ -3,7 +3,7 @@
 "use client";
 
 import React from 'react';
-import { Heading, Text, Flex, Button, Grid, Icon } from '@/once-ui/components';
+import { Heading, Text, Flex, Button, Grid, NavIcon } from '@/once-ui/components';
 import Link from 'next/link';
 import { useTheme } from './ThemeContext';
 import peopleData from './peopleData';
@@ -20,18 +20,27 @@ export default function Home() {
 			alignItems="center"
 			paddingTop="l"
 			paddingX="l">
-			<Flex
-				style={{ position: 'relative', width: '100%' }}>
-				<Button
-					onClick={toggleTheme}
-					style={{
-						position: 'absolute',
-						top: '16px',
-						right: '16px',
-						zIndex: 1000
-					}}>
-					Switch to {theme === 'dark' ? 'light' : 'dark'} mode
+			<Flex 
+				fillWidth
+				justifyContent="space-between"
+				style={{ position: 'relative', width: '100%'}}
+				as="header"
+				paddingX="l"
+				paddingY="2">
+				<Flex
+					gap="12">
+					<Button
+						onClick={toggleTheme}
+						prefixIcon={theme === 'dark' ? 'moon' : 'sun'}
+						variant='tertiary'
+						style={{
+							position: 'absolute',
+							top: '0rem',
+							right: '16px',
+							zIndex: 1000,
+						}}>
 				</Button>
+				</Flex>
 			</Flex>
 			<Flex
 				style={{ overflow: 'hidden' }}
@@ -67,7 +76,10 @@ export default function Home() {
 					paddingY="16"
 					marginBottom="xs">
 					<Text
-						onSolid='accent-weak'>
+						// onSolid='accent-strong'
+						variant='body-default-m'
+						onBackground='accent-medium'
+						>
 						As the bombs rain down, Gazans are desperately trying to evacuate through the only escape route i.e. the Rafah border crossing. Although
 						it is now closed, once open again, the Egyptians are charging our brothers and sisters $5000 per person just to cross through. FreeGazans was created
 						to have a centralised place to find the gofundme or other donation links of vetted individuals and families in Gaza. Links have been sourced directly 
@@ -107,19 +119,19 @@ export default function Home() {
 						</Flex>
 					</Flex>
 					<Grid
-            columns="repeat(1, 1fr)"
-            tabletColumns="1col"
-            mobileColumns="1col"
-            fillWidth>
-            {peopleData.map((person, index) => (
-              <LinkCard
-                key={index}
-                name={person.name}
-                description={person.description}
-                link={person.link}
-              />
-            ))}
-          </Grid>
+						columns="repeat(1, 1fr)"
+						tabletColumns="1col"
+						mobileColumns="1col"
+						fillWidth>
+						{peopleData.map((person, index) => (
+						<LinkCard
+							key={index}
+							name={person.name}
+							description={person.description}
+							link={person.link}
+						/>
+						))}
+					</Grid>
 				</Flex>
 			</Flex>
 			<Flex
@@ -139,8 +151,8 @@ export default function Home() {
 						href="https://www.linkedin.com/in/zaidhimran/"
 						prefixIcon="linkedin"
 						size="s"
-						variant="tertiary">
-						LinkedIn
+						variant="tertiary"
+						style={{bottom: '0.3rem'}}>
 					</Button>
 				</Flex>
 			</Flex>
