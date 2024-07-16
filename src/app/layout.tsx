@@ -1,11 +1,13 @@
-import { Flex, Text } from '@/once-ui/components'
-import { Inter } from 'next/font/google'
+"use client";
+import { Flex } from '@/once-ui/components';
+import { Inter } from 'next/font/google';
+import { ThemeProvider, useTheme } from './ThemeContext';
 
 const inter = Inter({
-	variable: '--font-inter',
-	subsets: ['latin'],
-	display: 'swap',
-})
+    variable: '--font-inter',
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 import "@/once-ui/tokens/scheme.css";
 import "@/once-ui/tokens/theme.css";
@@ -22,34 +24,38 @@ import "@/once-ui/styles/typography.scss";
 import "@/once-ui/styles/global.scss";
 import "@/once-ui/styles/layout.css";
 
+function RootLayoutContent({ children }: Readonly<{ children: React.ReactNode }>) {
+    const { theme } = useTheme();
+    return (
+        <html
+            style={{ height: '100%', background: 'var(--page-background)' }}
+            data-theme={theme}
+            data-brand="moss"
+            data-accent="moss"
+            data-neutral="gray"
+            data-border="playful"
+            lang="en"
+            className={`${inter.variable}`}>
+            <body
+                style={{ display: 'flex', height: '100%', width: '100%', margin: "0", padding: "0" }}>
+                <Flex
+                    flex={1}
+                    direction="column">
+                    {children}
+                </Flex>
+            </body>
+        </html>
+    );
+}
+
 export default function RootLayout({
-  	children,
+    children,
 }: Readonly<{
-  	children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-	return (
-		<html
-			style={{ height: '100%', background: 'var(--page-background)' }}
-			// data-border="playful"
-			// data-theme="light"
-			// data-neutral="gray"
-			// data-brand="cyan"
-			// data-accent="violet"
-			data-theme="dark"
-			data-brand="moss"
-			data-accent="moss"
-			data-neutral="gray"
-			data-border="playful"
-			lang="en"
-			className={`${inter.variable}`}>
-			<body
-				style={{ display: 'flex', height: '100%', width: '100%', margin: "0", padding: "0" }}>
-				<Flex
-					flex={1}
-					direction="column">
-					{children}
-				</Flex>
-			</body>
-		</html>
-	);
+    return (
+        <ThemeProvider>
+            <RootLayoutContent>{children}</RootLayoutContent>
+        </ThemeProvider>
+    );
 }

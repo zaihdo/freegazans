@@ -3,11 +3,13 @@
 "use client";
 
 import React from 'react';
-
 import { Heading, Text, Flex, Button, Grid, Icon } from '@/once-ui/components';
 import Link from 'next/link';
+import { useTheme } from './ThemeContext';
 
 export default function Home() {
+	const { theme, toggleTheme } = useTheme();
+
 	return (
 		<Flex
 			fillWidth
@@ -16,6 +18,19 @@ export default function Home() {
 			alignItems="center"
 			paddingTop="l"
 			paddingX="l">
+			<Flex
+				style={{ position: 'relative', width: '100%' }}>
+				<Button
+					onClick={toggleTheme}
+					style={{
+						position: 'absolute',
+						top: '16px',
+						right: '16px',
+						zIndex: 1000
+					}}>
+					Switch to {theme === 'dark' ? 'light' : 'dark'} mode
+				</Button>
+			</Flex>
 			<Flex
 				style={{ overflow: 'hidden' }}
 				fillWidth
@@ -28,16 +43,11 @@ export default function Home() {
 				<Flex
 					style={{zIndex: '1', width: '95%'}}
 					position="relative"
-					// background="accent-medium"
-					// border="neutral-medium"
-					// borderStyle="solid-1"
-					// radius="l"
 					paddingX="24"
 					paddingY="8"
 					marginBottom="xs"
 					alignItems='center'
-					justifyContent='center'
-					>
+					justifyContent='center'>
 					<Heading
 						variant="display-strong-l"
 						onBackground="neutral-strong">
@@ -55,8 +65,7 @@ export default function Home() {
 					paddingY="16"
 					marginBottom="xs">
 					<Text
-						onSolid='accent-weak'
-						>
+						onSolid='accent-weak'>
 						As the bombs rain down, Gazans are desperately trying to evacuate through the only escape route i.e. the Rafah border crossing. Although
 						it is now closed, once open again, the Egyptians are charging our brothers and sisters $5000 per person just to cross through. FreeGazans was created
 						to have a centralised place to find the gofundme or other donation links of vetted individuals and families in Gaza. Links have been sourced directly 
@@ -74,36 +83,14 @@ export default function Home() {
 						fillWidth
 						mobileDirection="row"
 						gap="1">
-						{/* <Flex
-							position="relative"
-							fillWidth
-							paddingY="xs"
-							paddingX="xl">
-							<Flex
-								style={{ top: '15%', left: '50%', transform: 'translateX(-50%) translateY(-50%) rotate(30deg)', backgroundImage: 'radial-gradient(ellipse, var(--brand-background-strong) 0%, rgba(0,0,0,0) 75%' }}
-								position="absolute"
-								width={20}
-								height={12}></Flex>
-							<Flex
-								style={{ top: '15%', left: '38%', transform: 'translateX(-50%) translateY(-50%) rotate(60deg)', backgroundImage: 'radial-gradient(ellipse, var(--brand-background-strong) 0%, rgba(0,0,0,0) 50%)' }}
-								position="absolute"
-								width={24}
-								height={42}></Flex>
-							<img
-								style={{ height:'4rem', position:'relative' }}
-								src="images/logo.svg"
-								alt="logo" />
-						</Flex> */}
 						<Flex
 							position="relative"
 							fillWidth
 							direction="column"
-							gap="24"
-							>
+							gap="24">
 							<Heading
 								variant="display-default-xs"
-								onBackground="neutral-strong"
-								>
+								onBackground="neutral-strong">
 								<Text style={{color: '#01b760'}}>Read their stories.</Text><br/><Text style={{color: '#d83838'}}>Donate to the cause.</Text><br/><Text color="#fff">Share Share Share.</Text>
 							</Heading>
 							<Button
@@ -112,7 +99,7 @@ export default function Home() {
 								variant="tertiary">
 								<Link
 									href="https://techforpalestine.org/projects/">
-										View more projects here
+									View more projects here
 								</Link>
 							</Button>
 						</Flex>
@@ -121,9 +108,8 @@ export default function Home() {
 						columns="repeat(1, 1fr)"
 						tabletColumns="1col"
 						mobileColumns="1col"
-						fillWidth
-						>
-							<Link
+						fillWidth>
+						<Link
 							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://www.gofundme.com/f/help-the-ahmed-family-to-leave-gaza-for-egypt">
 							<Flex
@@ -151,7 +137,7 @@ export default function Home() {
 								</Text>
 							</Flex>
 						</Link>
-							<Link
+						<Link
 							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://gofund.me/ea678d4c">
 							<Flex
@@ -234,7 +220,8 @@ export default function Home() {
 									👉 Iyad his family have lost their apartment and all their personal belongings when the building where they lived for 10 years was destroyed by the IOF. They moved first to Rafah and then to Deir Al-Balah, still displaced and homeless without access to water and food. Click to read their story.
 								</Text>
 							</Flex>
-						</Link><Link
+						</Link>
+						<Link
 							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://gofund.me/2b217b63">
 							<Flex
@@ -261,10 +248,10 @@ export default function Home() {
 									👉 Ibrahim, his wife, and mom are facing starvation and lack of water in central Gaza. Their only hope is to flee Gaza when Rafah Crossing reopens. The bribe to cross to the border is 5000£ and they can only count on us to pay that shameful amount. 
 								</Text>
 							</Flex>
-						</Link><Link
+						</Link>
+						<Link
 							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
-							href="https://gofund.me/59eef690"
-							>
+							href="https://gofund.me/59eef690">
 							<Flex
 								fillWidth
 								direction="column"
@@ -289,7 +276,8 @@ export default function Home() {
 									👉 Abdarhman&lsquo;s family. Since the beginning of the conflict this family have already been displaced 7 (seven!!!!) times. Her sister needs immediate medical attention and his brother wants to rebuild the family bakery destroyed by the IOF. Please, read about their campaign here.
 								</Text>
 							</Flex>
-						</Link><Link
+						</Link>
+						<Link
 							style={{ border: '1px solid var(--neutral-border-medium)', borderRadius: 'var(--radius-xl-nest-8)', padding: 'var(--responsive-space-l)', marginBottom: 10}}
 							href="https://www.gofundme.com/f/Reunitedmyfamily?attribution_id=sl:2696f2cb-b9e4-48ab-b393-438cb72f7f3d&lang=en_GB&utm_campaign=fp_sharesheet&utm_medium=customer&utm_source=copy_link">
 							<Flex
