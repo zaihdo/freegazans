@@ -5,7 +5,7 @@
 import React from 'react';
 import { Flex } from '@/once-ui/components';
 import Header from '../components/Header';
-import Home from '../pages/Home';
+import Home from '../pages/Home/page';
 import Footer from '../components/Footer';
 
 export default function Index() {
