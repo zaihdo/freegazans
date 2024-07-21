@@ -35,8 +35,13 @@ function RootLayoutContent({ children }: Readonly<{ children: React.ReactNode }>
             data-neutral="gray"
             data-border="playful"
             lang="en"
-            className={`${inter.variable}`}>
+            className={`${inter.variable}`}
+            suppressHydrationWarning={true}>
+            <head>
+                <title>Free Gazans | Read, Donate, Share</title>
+            </head>
             <body
+                suppressHydrationWarning={true}
                 style={{ display: 'flex', height: '100%', width: '100%', margin: "0", padding: "0" }}>
                 <Flex
                     flex={1}
