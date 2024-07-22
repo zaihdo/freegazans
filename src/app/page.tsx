@@ -12,11 +12,9 @@ export default function Index() {
     return (
         <Flex
             fillWidth
-            flex={1}
             direction="column"
             alignItems="center"
-            paddingTop="xs"
-            paddingX="l">
+            paddingX="s">
             <Header />
             <Home />
             <Footer />
