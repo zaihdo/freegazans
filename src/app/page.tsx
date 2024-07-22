@@ -15,7 +15,7 @@ export default function Index() {
             flex={1}
             direction="column"
             alignItems="center"
-            paddingTop="l"
+            paddingTop="xs"
             paddingX="l">
             <Header />
             <Home />
