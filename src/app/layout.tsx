@@ -38,7 +38,7 @@ function RootLayoutContent({ children }: Readonly<{ children: React.ReactNode }>
             className={`${inter.variable}`}
             suppressHydrationWarning={true}>
             <head>
-                <title>Free Gazans | Read, Donate, Share</title>
+                <title>FillUsIn | Free the Gazans</title>
             </head>
             <body
                 suppressHydrationWarning={true}
